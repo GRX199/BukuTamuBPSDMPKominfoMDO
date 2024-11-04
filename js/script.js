@@ -15,32 +15,4 @@
             video.style.display = 'block';
             snapButton.style.display = 'block';
             canvas.style.display = 'none';
-  
-    const canvas = document.getElementById('signature-pad');
-        const context = canvas.getContext('2d');
-        let drawing = false;
-
-        canvas.addEventListener('mousedown', (e) => {
-            drawing = true;
-            context.moveTo(e.offsetX, e.offsetY);
-        });
-
-        canvas.addEventListener('mousemove', (e) => {
-            if (drawing) {
-                context.lineTo(e.offsetX, e.offsetY);
-                context.stroke();
-            }
-        });
-
-        canvas.addEventListener('mouseup', () => {
-            drawing = false;
-        });
-
-        canvas.addEventListener('mouseout', () => {
-            drawing = false;
-        });
-
-        function clearSignature() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-        }
-  })  
+  })
