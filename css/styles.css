@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #0073e6; /* Bright Blue */
+    color: white;
+    padding: 12px;
+    font-size: 1em;
+}
+
+td {
+    padding: 12px;
+    font-size: 1em;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td img {
+    border-radius: 6px;
+    max-width: 100px;
+    height: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kominfo-logo-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.kominfo-logo-container img {
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.kominfo-logo-container img:hover {
+    transform: scale(1.1);
+}
+
+.kominfo-logo-container p {
+    margin-top: 20px;
+    color: #003366; /* Dark Blue */
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}

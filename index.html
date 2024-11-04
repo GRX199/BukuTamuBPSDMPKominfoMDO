@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #003366, #0073e6, #ffffff); /* Dark Blue, Light Blue, and White */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 0; /* Add padding to the top and bottom of the body */
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #003366; /* Dark Blue */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #001a35; /* Dark Blue */
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        input[type="text"], input[type="submit"], button {
+            width: 100%;
+            padding: 12px 15px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+            color: #444; /* Softer black for inputs */
+        }
+
+        input[type="text"]:focus, button:focus {
+            border-color: #0073e6; /* Bright Blue */
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+        }
+
+        button {
+            background: linear-gradient(135deg, #0073e6, #005bb5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 6px;
+            padding: 12px 0;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 115, 230, 0.4);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #005bb5, #003366);
+            box-shadow: 0 6px 12px rgba(0, 91, 181, 0.5);
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #0073e6, #0066cc);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.2em;
+            display: none;
+            animation: slideDown 0.5s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 102, 204, 0.4);
+            position: relative;
+        }
+
+        .success-message p {
+            margin-bottom: 10px;
+        }
+
+        .success-message button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: white;
+            color: #0073e6;
+            border: 2px solid #0073e6;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .success-message button:hover {
+            background-color: #0073e6;
+            color: white;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kominfo-logo-container">
+            <img src="logo.png" alt="Logo Kominfo" class="kominfo-logo" width="150">
+            <p>BPSDMP Kominfo Manado</p>
+        </div>
+
+        <h1>Buku Tamu</h1>
+
+        <form name="Buku-Tamu-BPSDMP">
+            <div class="form-group">
+                <label for="Nama">Nama:</label>
+                <input type="text" id="name" name="Nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Instansi">Instansi:</label>
+                <input type="text" id="Instansi" name="Instansi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Tujuan Kunjungan">Tujuan Kunjungan:</label>
+                <input type="text" id="reason" name="Tujuan Kunjungan" required>
+            </div>
+            <div class="form-group">
+                <label for="Alamat">Alamat:</label>
+                <input type="text" id="address" name="Alamat" required>
+            </div>
+            <div class="form-group">
+                <label for="Nomor Kontak">Nomor Kontak:</label>
+                <input type="text" id="contact" name="Nomor Kontak" required>
+            </div>
+            <button type="submit">Kirim</button>
+        </form>
+
+        <div id="success-message" class="success-message">
+            <p>Terima kasih! Data Anda telah berhasil dikirim.</p>
+            <button onclick="document.getElementById('success-message').style.display='none'">Tutup</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
