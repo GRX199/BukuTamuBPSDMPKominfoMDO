@@ -86,15 +86,3 @@ td img {
         width: 100px;
     }
 }
-
-.kominfo-logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.kominfo-logo {
-    border-radius: 8px;
-    margin-bottom: 8px;
-}
